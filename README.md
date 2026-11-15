@@ -43,7 +43,7 @@
 
 - **M.S. Biostatistics**, Arizona State University (2025, GPA 3.97/4.00)
 - **B.Tech Biotechnology**, Manipal Institute of Technology (2023)
-- Data Science Analyst on a collaboration between ASU and the Global Observatory for Physical Activity (GoPA!)
+- Data Science Analyst on a collaboration between ASU and the Global Observatory for Physical Activity (GoPA!): built a country-year panel from physical-activity publication records and socioeconomic indicators for six African countries, compared naive-drift, ETS and ARIMA forecasts to 2030, and screened predictors with correlation, PCA and lagged cross-correlation (GoPA! data are confidential and not shared)
 - iGEM with the Manipal team: Bronze (2021) and Gold (2022)
 
 ## Currently
