@@ -4,6 +4,16 @@
 
 ---
 
+## Two results I'm proud of
+
+**A biomarker that held up on data it never saw.** A frozen clinical + 5-gene signature for lung adenocarcinoma, built with every data-dependent step refit inside each training fold, then tested without refitting on two independent cohorts: Harrell C **0.715** (n=226) and **0.697** (n=442). Inside TCGA, multi-omics did *not* detectably beat a clinical-only model, and the repo reports that as the pre-specified result rather than hiding it.
+→ [multi-omics-biomarker-pipeline](https://github.com/rushadnihal/multi-omics-biomarker-pipeline)
+
+**A target trial emulation that ends in an honest null.** ACEi/ARB use and cardiovascular death in type 2 diabetes with CKD (NHANES 2005-2018, n=2,540). After weighting, covariate balance is good (largest SMD 0.051), but the estimates are inconclusive. The project diagnoses why (residual healthy-user bias, limited sample size) and checks its machinery against simulations with a known truth.
+→ [causal-survival-analysis](https://github.com/rushadnihal/causal-survival-analysis)
+
+---
+
 ## What I work on
 
 - **Survival analysis and biomarkers:** leakage-controlled modeling of high-dimensional omics data, with frozen signatures and external validation.
@@ -19,8 +29,7 @@
 | [multi-omics-biomarker-pipeline](https://github.com/rushadnihal/multi-omics-biomarker-pipeline) | Leakage-controlled survival biomarker for lung adenocarcinoma (TCGA-LUAD), validated on two external cohorts | Python |
 | [causal-survival-analysis](https://github.com/rushadnihal/causal-survival-analysis) | Target trial emulation of ACEi/ARB use and cardiovascular death in type 2 diabetes with CKD, using NHANES | Python |
 | [myco-rsm](https://github.com/rushadnihal/myco-rsm) | Response surface and multi-objective media optimizer for submerged mycelial fermentation | R, Shiny |
-| [nhanes3-dietary-serum-cholesterol](https://github.com/rushadnihal/nhanes3-dietary-serum-cholesterol) | Multilevel analysis of dietary and serum cholesterol, with participants nested in counties and states | R, Quarto |
-| [stochasticstudy](https://github.com/rushadnihal/stochasticstudy) | Stochastic temperature model behind a spoilage-risk app for chilled food | R, Shiny |
+| [adni-subgroup-calibration-code](https://github.com/rushadnihal/adni-subgroup-calibration-code) | *Work in progress:* audit of how well MCI-to-dementia risk models are calibrated across landmark times and demographic subgroups in ADNI (code only; ADNI data cannot be redistributed) | R |
 
 ## Toolbox
 
@@ -39,7 +48,7 @@
 
 ## Currently
 
-Building my portfolio in clinical and omics statistics, and learning German (A1).
+Writing up a calibration audit of dementia risk prediction in ADNI, and learning German (A1).
 
 ## Get in touch
 
