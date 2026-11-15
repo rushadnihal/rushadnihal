@@ -28,6 +28,7 @@
 |---|---|---|
 | [multi-omics-biomarker-pipeline](https://github.com/rushadnihal/multi-omics-biomarker-pipeline) | Leakage-controlled survival biomarker for lung adenocarcinoma (TCGA-LUAD), validated on two external cohorts | Python |
 | [causal-survival-analysis](https://github.com/rushadnihal/causal-survival-analysis) | Target trial emulation of ACEi/ARB use and cardiovascular death in type 2 diabetes with CKD, using NHANES | Python |
+| [cdisc-pilot-sas-adam-tlf](https://github.com/rushadnihal/cdisc-pilot-sas-adam-tlf) | SDTM to ADaM to tables, Kaplan-Meier/Cox and a repeated measures model on the public CDISC pilot study, with the derived datasets checked against the published PHUSE ADaM files (PROC COMPARE) | SAS |
 | [myco-rsm](https://github.com/rushadnihal/myco-rsm) | Response surface and multi-objective media optimizer for submerged mycelial fermentation | R, Shiny |
 | [adni-subgroup-calibration-code](https://github.com/rushadnihal/adni-subgroup-calibration-code) | *Work in progress:* audit of how well MCI-to-dementia risk models are calibrated across landmark times and demographic subgroups in ADNI (code only; ADNI data cannot be redistributed) | R |
 
