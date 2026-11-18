@@ -1,10 +1,15 @@
 # Hi, I'm Rushad Nihal
 
-**Biostatistician** with an M.S. in Biostatistics (Arizona State University) and a B.Tech in Biotechnology. I work where statistics meets biology: turning messy clinical, omics and bioprocess data into analyses that are reproducible and honest about what they can and cannot show.
+Biostatistics M.S. graduate (Arizona State University, 2025) with a B.Tech in Biotechnology. I work where statistics meets biology: turning messy clinical, omics and bioprocess data into analyses that are reproducible and honest about what they can and cannot show.
+
+**Looking for:** biostatistician or statistical programmer roles in clinical development, in the US or EU.
 
 ---
 
-## Two results I'm proud of
+## Three results I'm proud of
+
+**A trial-style analysis with a frozen plan.** A natural-history MMRM of brain-volume decline in OASIS-2 under a statistical analysis plan tagged in git before any outcome analysis, with an ICH E9(R1) estimand, missing-data sensitivity analyses, SAS and R agreeing to 1e-6, and a simulation of 888,000 virtual trials giving type I error, power and sample size for a two-arm trial on this endpoint.
+→ [oasis2-mmrm-trial-simulation](https://github.com/rushadnihal/oasis2-mmrm-trial-simulation)
 
 **A biomarker that held up on data it never saw.** A frozen clinical + 5-gene signature for lung adenocarcinoma, built with every data-dependent step refit inside each training fold, then tested without refitting on two independent cohorts: Harrell C **0.715** (n=226) and **0.697** (n=442). Inside TCGA, multi-omics did *not* detectably beat a clinical-only model, and the repo reports that as the pre-specified result rather than hiding it.
 → [multi-omics-biomarker-pipeline](https://github.com/rushadnihal/multi-omics-biomarker-pipeline)
@@ -26,12 +31,13 @@
 
 | Project | What it is | Stack |
 |---|---|---|
+| [oasis2-mmrm-trial-simulation](https://github.com/rushadnihal/oasis2-mmrm-trial-simulation) | Natural-history MMRM of brain-volume decline in OASIS-2 under a frozen SAP and estimand, missing-data sensitivity analyses, SAS/R cross-check, and a simulation study of a two-arm trial (type I error, power, sample size) | R, SAS |
+| [cdisc-pilot-sas-adam-tlf](https://github.com/rushadnihal/cdisc-pilot-sas-adam-tlf) | SDTM to ADaM to tables, Kaplan-Meier/Cox and a repeated measures model on the public CDISC pilot study, with the derived datasets checked against the published PHUSE ADaM files (PROC COMPARE) | SAS |
 | [multi-omics-biomarker-pipeline](https://github.com/rushadnihal/multi-omics-biomarker-pipeline) | Leakage-controlled survival biomarker for lung adenocarcinoma (TCGA-LUAD), validated on two external cohorts | Python |
 | [causal-survival-analysis](https://github.com/rushadnihal/causal-survival-analysis) | Target trial emulation of ACEi/ARB use and cardiovascular death in type 2 diabetes with CKD, using NHANES | Python |
 | [aact-trial-outcomes-sql-sas](https://github.com/rushadnihal/aact-trial-outcomes-sql-sas) | What predicts early termination and late or missing results reporting in 44k Phase 2/3 drug trials on ClinicalTrials.gov (AACT): PostgreSQL cohort build, then SAS logistic and Cox models with sponsor-clustered errors | SQL, SAS |
-| [cdisc-pilot-sas-adam-tlf](https://github.com/rushadnihal/cdisc-pilot-sas-adam-tlf) | SDTM to ADaM to tables, Kaplan-Meier/Cox and a repeated measures model on the public CDISC pilot study, with the derived datasets checked against the published PHUSE ADaM files (PROC COMPARE) | SAS |
-| [myco-rsm](https://github.com/rushadnihal/myco-rsm) | Response surface and multi-objective media optimizer for submerged mycelial fermentation | R, Shiny |
 | [adni-subgroup-calibration-code](https://github.com/rushadnihal/adni-subgroup-calibration-code) | *Work in progress:* audit of how well MCI-to-dementia risk models are calibrated across landmark times and demographic subgroups in ADNI (code only; ADNI data cannot be redistributed) | R |
+| [myco-rsm](https://github.com/rushadnihal/myco-rsm) | *Side project from my biotechnology background:* response surface and multi-objective media optimizer for submerged mycelial fermentation | R, Shiny |
 
 ## Toolbox
 
