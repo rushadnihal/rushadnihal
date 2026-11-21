@@ -2,7 +2,6 @@
 
 **Biostatistician** with an M.S. in Biostatistics (Arizona State University, GPA 3.97) and a B.Tech in Biotechnology. I work on clinical-trial statistics: designing trials, writing and following statistical analysis plans, fitting the models regulators expect (MMRM, Cox, logistic), and checking results in both **SAS and R**.
 
-**Looking for biostatistician / statistician roles in Ireland and Germany.** Learning German (A1).
 
 ---
 
