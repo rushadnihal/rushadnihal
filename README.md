@@ -9,7 +9,7 @@
 
 | Stage | What I've built | Project |
 |---|---|---|
-| **Design** | Sample size, Lan-DeMets group-sequential boundaries, Bayesian go/no-go interims; every number validated against `rpact` and `gsDesign` | [trialdesign](https://github.com/rushadnihal/trialdesign-v0.1.0) |
+| **Design** | Sample size, group-sequential boundaries, promising-zone re-estimation, Bayesian go/no-go and patient-level survival simulation; every number validated against `rpact`, `gsDesign` and base R | [trialdesign](https://github.com/rushadnihal/trialdesign) |
 | **SAP and estimands** | SAP frozen under a git tag before any outcome was seen; ICH E9(R1) estimand; MMRM with missing-data sensitivity analyses | [oasis2-mmrm-trial-simulation](https://github.com/rushadnihal/oasis2-mmrm-trial-simulation) |
 | **CDISC deliverables** | SDTM → ADaM → TLFs in SAS, with derived datasets checked against the published PHUSE ADaM files (`PROC COMPARE`) | [cdisc-pilot-sas-adam-tlf](https://github.com/rushadnihal/cdisc-pilot-sas-adam-tlf) |
 | **Independent validation** | Primary MMRM fitted in R (`mmrm`) and SAS (`PROC MIXED`, DDFM=KR); estimates and SEs agree within 1e-6 | [oasis2-mmrm-trial-simulation](https://github.com/rushadnihal/oasis2-mmrm-trial-simulation) |
@@ -20,6 +20,18 @@
 
 ## Featured projects
 
+### [trialdesign](https://github.com/rushadnihal/trialdesign): clinical trial design package · Python
+[![PyPI](https://img.shields.io/pypi/v/gsdtrial)](https://pypi.org/project/gsdtrial/)
+
+CLI and Python API for designing two-arm trials before the data exist (`pip install gsdtrial`).
+- Sample size for continuous, binary and time-to-event endpoints: superiority, non-inferiority and equivalence
+- Group-sequential designs with alpha spending and binding or non-binding futility, solved by recursive numerical integration
+- Promising-zone (Cui-Hung-Wang) and blinded sample size re-estimation, and a Bayesian go/no-go interim with predictive probability of success
+- Patient-level survival simulation under non-proportional hazards (delayed, waning or crossing effects) with the Fleming-Harrington weighted log-rank test
+- Graphical multiple testing, end-of-trial inference (repeated CIs, median-unbiased estimates), Markdown reports and stable `--json` output
+- **Validated against `rpact`, `gsDesign`, `mvtnorm` and base R** in CI; exact operating characteristics checked against 200,000-trial simulations
+- Includes a [design memo](https://github.com/rushadnihal/trialdesign/blob/main/docs/design_memo.md) written the way I'd present a design to a clinical team
+
 ### [oasis2-mmrm-trial-simulation](https://github.com/rushadnihal/oasis2-mmrm-trial-simulation): MMRM, estimands and trial simulation · R, SAS
 Trial-style longitudinal analysis of brain-volume decline in OASIS-2.
 - **SAP v1.0 frozen before outcomes**, with every later change logged as a deviation
@@ -27,14 +39,6 @@ Trial-style longitudinal analysis of brain-volume decline in OASIS-2.
 - **SAS/R double programming** that agrees to 1e-6
 - ADEMP simulation study (888,000 simulated trials) of type I error, power and sample size: **64 per arm** for 80% power, 86 allowing for 30% dropout
 - Quarto report, `renv`-pinned, CI runs the full pipeline on synthetic data
-
-### [trialdesign](https://github.com/rushadnihal/trialdesign-v0.1.0): clinical trial design package · Python
-CLI and API for designing two-arm trials before the data exist.
-- Fixed designs for continuous, binary and time-to-event endpoints
-- Group-sequential designs (O'Brien-Fleming / Pocock spending, non-binding futility) solved by recursive numerical integration
-- Bayesian beta-binomial interim with predictive probability of success and assurance
-- Exact operating characteristics checked against 200,000-trial simulations; **validated against `rpact`, `gsDesign` and base R** in CI
-- Includes a [design memo](https://github.com/rushadnihal/trialdesign-v0.1.0/blob/main/docs/design_memo.md) written the way I'd present a design to a clinical team
 
 ### [cdisc-pilot-sas-adam-tlf](https://github.com/rushadnihal/cdisc-pilot-sas-adam-tlf): CDISC SDTM → ADaM → TLF · SAS
 Submission-style programming on the public CDISC pilot study (xanomeline vs placebo, 254 randomized): ADSL, ADAE and ADTTE derived from SDTM with dataset specs; disposition, baseline, exposure and adverse-event tables; Kaplan-Meier/Cox with a proportional-hazards check; ANCOVA and a repeated-measures model for ADAS-Cog. Derived datasets are reconciled against the published PHUSE ADaM files with `PROC COMPARE`, and outputs go to RTF/PDF with saved logs and a validation checklist.
@@ -65,7 +69,7 @@ ACEi/ARB use and cardiovascular death in type 2 diabetes with CKD (NHANES 2005�
 **R:** `mmrm`, `emmeans`, `nlme`, `lme4`, `survival`, `rbmi`, `mice`, `metafor`, `rpact`, `gsDesign`, tidyverse, Shiny, Quarto
 **Python:** numpy, scipy, pandas, statsmodels, lifelines, scikit-survival, scikit-learn
 **Clinical standards:** CDISC SDTM and ADaM, ICH E9 and E9(R1) estimands, SAP writing, double programming / QC
-**Methods:** group-sequential and Bayesian trial design, mixed models for repeated measures, survival analysis, missing data (MAR/MNAR, reference-based imputation), causal inference, meta-analysis, simulation studies (ADEMP)
+**Methods:** group-sequential, adaptive (sample size re-estimation) and Bayesian trial design, non-proportional hazards, mixed models for repeated measures, survival analysis, missing data (MAR/MNAR, reference-based imputation), causal inference, meta-analysis, simulation studies (ADEMP)
 **Reproducibility:** Git, GitHub Actions CI, `renv`, pytest, synthetic-data pipelines for confidential data
 
 ## Background
